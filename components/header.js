@@ -93,8 +93,8 @@ const Logo = () => (
 
 const Links = () => (
   <div className="hidden items-center gap-2 md:flex">
-    <GlassLink text="What is finance bro" />
-    <GlassLink text="Team" />
+    <GlassLink text="Cos'è WiseFit" />
+    <GlassLink text="Il Nostro Team" />
   </div>
 );
 
@@ -127,7 +127,7 @@ const Buttons = ({ setMenuOpen }) => (
     </div>
 
     <button className="font-black relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-nero from-20% to-verdeScuro px-4 py-2 text-crema transition-transform hover:scale-105 active:scale-95">
-      Try for free
+     Prova Gratis
     </button>
 
     <button
@@ -143,7 +143,7 @@ const SignInButton = () => {
   return (
     <button className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
       <span className="font-light relative z-10 text-bianco/90 transition-colors group-hover:text-bianco">
-        Sign in
+        Accedi
       </span>
       <span className="absolute inset-0 z-0 bg-gradient-to-br from-bianco/20 to-bianco/5 opacity-0 transition-opacity group-hover:opacity-100" />
     </button>
@@ -161,8 +161,8 @@ const MobileMenu = ({ menuOpen }) => {
     >
       <div className="flex items-center justify-between px-4 pb-4">
         <div className="flex items-center gap-4">
-          <TextLink text="What is finance bro" />
-          <TextLink text="Team" />
+          <TextLink text="Cos'è WiseFit" />
+          <TextLink text="Il Nostro Team" />
         </div>
         <SignInButton />
       </div>

@@ -14,18 +14,18 @@ function Footer() {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                  <h2 className="mb-6 text-sm font-semibold text-verdeChiaro uppercase ">Quick Links</h2>
+                  <h2 className="mb-6 text-sm font-semibold text-verdeChiaro uppercase ">Link Utili</h2>
                   <ul className="text-gray-500 font-medium">
                       <li className="mb-4">
-                          <Link href="https://flowbite.com/" className="hover:underline">Team</Link>
+                          <Link href="https://flowbite.com/" className="hover:underline">Il Nostro Team</Link>
                       </li>
                       <li>
-                          <Link href="https://tailwindcss.com/" className="hover:underline">Try for free!</Link>
+                          <Link href="https://tailwindcss.com/" className="hover:underline">Prova gratis</Link>
                       </li>
                   </ul>
               </div>
               <div>
-                  <h2 className="mb-6 text-sm font-semibold text-verdeChiaro uppercase">Follow us</h2>
+                  <h2 className="mb-6 text-sm font-semibold text-verdeChiaro uppercase">Seguici</h2>
                   <ul className="text-gray-500 :text-gray-400 font-medium">
                       <li className="mb-4">
                           <Link href="https://github.com/MarioCarcota/WiseFi" className="hover:underline ">Github</Link>
@@ -47,7 +47,7 @@ function Footer() {
       </div>
       <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
       <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center ">© 2023 <Link href="/" className="hover:underline">WiseFi™</Link>. All Rights Reserved.
+          <span className="text-sm text-gray-500 sm:text-center ">© 2023 <Link href="/" className="hover:underline">WiseFi™</Link>. Tutti i diritti riservati.
           </span>
     {/*  <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
               <Link href="#" className="text-gray-500 hover:text-gray-900 ">

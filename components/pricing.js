@@ -24,7 +24,7 @@ const Heading = ({ selected, setSelected }) => {
   return (
     <div className="w-full mb-12 lg:mb-24 relative z-10">
       <h3 className="font-semibold text-5xl text-crema lg:text-7xl text-center mb-6">
-        Pricing plans
+        Abbonamenti
       </h3>
     
       <div className="flex items-center justify-center gap-3 text-bianco hover:text-nero transition-all duration-75">
@@ -32,7 +32,7 @@ const Heading = ({ selected, setSelected }) => {
           onClick={() => setSelected("M")}
           className={selected === "M" ? SELECTED_STYLES : DESELECTED_STYLES}
         >
-          Monthly
+          Mensile
           {selected === "M" && <BackgroundShift />}
         </button>
         <div className="relative text-bianco hover:text-nero transition-all duration-75">
@@ -40,7 +40,7 @@ const Heading = ({ selected, setSelected }) => {
             onClick={() => setSelected("A")}
             className={selected === "A" ? SELECTED_STYLES : DESELECTED_STYLES}
           >
-            Annual
+            Annuale
             {selected === "A" && <BackgroundShift />}
           </button>
           <CTAArrow />
@@ -77,18 +77,18 @@ const CTAArrow = () => (
     >
       <path
         d="M14.7705 15.8619C33.2146 15.2843 72.0772 22.1597 79.9754 54.2825"
-        stroke="#7D7BE5"
+        stroke="#7CA982"
         strokeWidth="3"
       />
       <path
         d="M17.7987 7.81217C18.0393 11.5987 16.4421 15.8467 15.5055 19.282C15.2179 20.3369 14.9203 21.3791 14.5871 22.4078C14.4728 22.7608 14.074 22.8153 13.9187 23.136C13.5641 23.8683 12.0906 22.7958 11.7114 22.5416C8.63713 20.4812 5.49156 18.3863 2.58664 15.9321C1.05261 14.6361 2.32549 14.1125 3.42136 13.0646C4.37585 12.152 5.13317 11.3811 6.22467 10.7447C8.97946 9.13838 12.7454 8.32946 15.8379 8.01289"
-        stroke="#7D7BE5"
+        stroke="#7CA982"
         strokeWidth="3"
         strokeLinecap="round"
       />
     </motion.svg>
     <span className="block text-xs w-fit bg-verdeScuro text-bianco shadow px-1.5 py-0.5 rounded -mt-1 ml-8 -rotate-2 font-light italic">
-      Save $$$
+      Risparmia €€€
     </span>
   </div>
 );
@@ -97,10 +97,10 @@ const PriceCards = ({ selected }) => (
   <div className="flex flex-col lg:flex-row gap-8 lg:gap-4 w-full max-w-6xl mx-auto relative z-10">
     {/* FREE */}
     <div className="w-full bg-white p-6 border-[1px] border-slate-300 rounded-xl">
-      <p className="text-2xl font-bold mb-2">Free</p>
-      <p className="text-lg mb-6">Everything to start</p>
+      <p className="text-2xl font-bold mb-2">Gratis</p>
+      <p className="text-lg mb-6">Il bundle perfetto per partire</p>
       <p className="text-6xl font-bold mb-8">
-        $0<span className="font-normal text-xl">/month</span>
+      0€<span className="font-normal text-xl">/al mese</span>
       </p>
       <div className="flex items-center gap-2 mb-2">
         <svg
@@ -172,14 +172,14 @@ const PriceCards = ({ selected }) => (
         whileTap={{ scale: 0.985 }}
         className="w-full py-4 mt-8 font-semibold bg-nero text-crema rounded-lg uppercase"
       >
-        Sign up free
+         Comincia gratis
       </motion.button>
     </div>
 
     {/* PRO  */}
     <div className="w-full bg-white p-6 border-[1px] border-slate-300 rounded-xl">
-      <p className="text-2xl font-bold mb-2">Professional</p>
-      <p className="text-lg mb-6">Everything to launch</p>
+      <p className="text-2xl font-bold mb-2">Start</p>
+      <p className="text-lg mb-6">Il bundle perfetto per avere tutto a portata di click</p>
       <div className="overflow-hidden mb-8">
         <AnimatePresence mode="wait">
           {selected === "M" ? (
@@ -191,8 +191,8 @@ const PriceCards = ({ selected }) => (
               transition={{ ease: "linear", duration: 0.25 }}
               className="text-6xl font-bold text-verdeChiaro"
             >
-              <span>$49</span>
-              <span className="font-normal text-xl">/month</span>
+              <span>6€</span>
+              <span className="font-normal text-xl">/al mese</span>
             </motion.p>
           ) : (
             <motion.p
@@ -203,8 +203,8 @@ const PriceCards = ({ selected }) => (
               transition={{ ease: "linear", duration: 0.25 }}
               className="text-6xl font-bold text-verdeChiaro"
             >
-              <span>$39</span>
-              <span className="font-normal text-xl">/month</span>
+              <span>4€</span>
+              <span className="font-normal text-xl">/al mese</span>
             </motion.p>
           )}
         </AnimatePresence>
@@ -279,14 +279,14 @@ const PriceCards = ({ selected }) => (
         whileTap={{ scale: 0.985 }}
         className="w-full py-4 mt-8 font-semibold bg-verdeChiaro text-crema  rounded-lg uppercase"
       >
-        Sign up professional
+         Passa a Start
       </motion.button>
     </div>
 
     {/* ENTERPRISE */}
     <div className="w-full bg-white p-6 border-[1px] border-slate-300 rounded-xl">
-      <p className="text-2xl font-bold mb-2">Enterprise</p>
-      <p className="text-lg mb-6">Everything to go public</p>
+      <p className="text-2xl font-bold mb-2">Premium</p>
+      <p className="text-lg mb-6">Tutto il mondo finanziario nelle tue mani</p>
       <div className="overflow-hidden mb-8">
         <AnimatePresence mode="wait">
           {selected === "M" ? (
@@ -298,8 +298,8 @@ const PriceCards = ({ selected }) => (
               transition={{ ease: "linear", duration: 0.25 }}
               className="text-6xl font-bold"
             >
-              <span>$499</span>
-              <span className="font-normal text-xl">/month</span>
+              <span>29€</span>
+              <span className="font-normal text-xl">/al mese</span>
             </motion.p>
           ) : (
             <motion.p
@@ -310,8 +310,8 @@ const PriceCards = ({ selected }) => (
               transition={{ ease: "linear", duration: 0.25 }}
               className="text-6xl font-bold"
             >
-              <span>$399</span>
-              <span className="font-normal text-xl">/month</span>
+              <span>19€</span>
+              <span className="font-normal text-xl">/al mese</span>
             </motion.p>
           )}
         </AnimatePresence>
@@ -386,7 +386,7 @@ const PriceCards = ({ selected }) => (
         whileTap={{ scale: 0.985 }}
         className="w-full py-4 mt-8 font-semibold bg-verdeScuro text-crema rounded-lg uppercase"
       >
-        Sign up enterprise
+        Passa a premium
       </motion.button>
     </div>
   </div>

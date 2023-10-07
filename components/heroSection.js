@@ -48,19 +48,19 @@ const DragShuffleHero = () => {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 md:grid-cols-2 md:gap-8">
         <div>
           <h1 className="text-5xl font-[900] text-verdeChiaro leading-[1.25] md:text-7xl">
-            Why stress? Use WiseFi!
+          Perché stressarti? Usa WiseFi!
           </h1>
           <p className="mb-8 mt-4 text-lg text-bianco">
-            ...but we're going to help. We send out weekly break downs of
-            exactly what's working and what's not for the largest companies in
-            the world. It's free.
+            ...Parlare di finanza non sarà più un problema.
+              Insights e terminologie finanziarie alla portata di tutti!
+
           </p>
           <form
             onSubmit={(e) => e.preventDefault()}
             className="flex items-center gap-2"
           >
             <button className="whitespace-nowrap rounded bg-verdeScuro px-3 py-2 transition-transform hover:scale-[1.02] active:scale-[0.98]">
-              Try now our AI!
+              Prova subito la nostra nuova AI!
             </button>
           </form>
         </div>
@@ -70,7 +70,7 @@ const DragShuffleHero = () => {
         >
           <Card
             imgUrl="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80"
-            testimonial="I feel like I've learned as much from X as I did completing my masters. It's the first thing I read every morning."
+            testimonial="Sento di aver imparato tanto da WiseFi quanto dal mio master. È la prima cosa che leggo ogni mattina."
             author="Jenn F. - Marketing Director @ Square"
             handleDragEnd={handleDragEnd}
             dragProgress={dragProgress}
@@ -80,7 +80,7 @@ const DragShuffleHero = () => {
           />
           <Card
             imgUrl="https://images.unsplash.com/photo-1514161955277-4ea47eef2ff9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80"
-            testimonial="My boss thinks I know what I'm doing. Honestly, I just read this newsletter."
+            testimonial="La gente pensa che io sappia cosa sto facendo. Onestamente, ho solo letto questa newsletter."
             author="Adrian Y. - Product Marketing @ Meta"
             handleDragEnd={handleDragEnd}
             dragProgress={dragProgress}
@@ -90,7 +90,7 @@ const DragShuffleHero = () => {
           />
           <Card
             imgUrl="https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2962&q=80"
-            testimonial="Can not believe this is free. If X was $5,000 a month, it would be worth every penny. I plan to name my next child after X."
+            testimonial="Non posso credere che sia gratuito. Se WiseFi costasse 5.000euro al mese, varrebbe ogni centesimo."
             author="Devin R. - Growth Marketing Lead @ OpenAI"
             handleDragEnd={handleDragEnd}
             dragProgress={dragProgress}

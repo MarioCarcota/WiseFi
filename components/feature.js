@@ -3,13 +3,12 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
-  FiArrowUp,
+  FiAward,
+  FiCheckCircle,
   FiChevronLeft,
   FiChevronRight,
-  FiLink,
-  FiTarget,
-  FiTool,
-  FiUpload,
+  FiInbox,
+  FiUser,
 } from "react-icons/fi";
 
 const CollapseCardFeatures = () => {
@@ -32,17 +31,17 @@ const CollapseCardFeatures = () => {
       <div className="mx-auto max-w-6xl">
         <div className="mb-8 flex justify-between gap-4">
           <h2 className="text-4xl text-crema font-bold leading-[1.2] md:text-5xl">
-            We're good. <span className="text-verdeChiaro">Here's why.</span>
+            Siamo giusti per te. <span className="text-verdeChiaro">Ecco perchè.</span>
           </h2>
           <div className="flex gap-2">
             <button
-              className="h-fit bg-nero p-4 text-2xl text-bianco transition-colors hover:bg-black-700"
+              className="h-fit bg-verdeChiaro p-4 text-2xl text-crema transition-colors hover:bg-black-700"
               onClick={shiftLeft}
             >
               <FiChevronLeft />
             </button>
             <button
-              className="h-fit bg-nero p-4 text-2xl text-bianco transition-colors hover:bg-black-700"
+              className="h-fit bg-verdeChiaro p-4 text-2xl text-crema transition-colors hover:bg-black-700"
               onClick={shiftRight}
             >
               <FiChevronRight />
@@ -85,33 +84,27 @@ export default CollapseCardFeatures;
 
 const features = [
   {
-    title: "Faster uploads",
-    Icon: FiUpload,
+    title: "Conversazione Istantanea",
+    Icon: FiUser,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe deserunt ipsum rerum natus fugit ex minima voluptas ratione quaerat. Ea!",
+      "Ora con WiseFi puoi parlare istantaneamente con un Intelligenza Artificale, istruita solo con i migliori darti trovabili internazionalemnte online, selezionati con cura per darti solo risultati perfetti!",
   },
   {
-    title: "99.99% uptime",
-    Icon: FiArrowUp,
+    title: "99.99% Delle Volte Non Sbaglia",
+    Icon: FiAward,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, vitae sed? Maxime!",
+      "La nostra piattaforma è sviluppata per creare il percorso perfetto per te e al 99,99% ti darà sempre e solo contenuti che ti affascineranno.",
   },
   {
-    title: "Unlimited requests",
-    Icon: FiTarget,
+    title: "Email Giornaliere",
+    Icon: FiInbox,
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo ab perspiciatis earum quibusdam laudantium non nihil nesciunt?",
+      "Ti manderemo tutti i giorni alle 08:00 deiu fun facts e argomenti innovativi sulla finanza personale per accrescere il tuo bagaglio culturale sempre di più, non ti preoccupare saranno corti questi fun fact ;)",
   },
   {
-    title: "500+ integrations",
-    Icon: FiLink,
+    title: "Trova i migliori advisor",
+    Icon: FiCheckCircle,
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo nobis officia, nostrum eligendi accusamus unde ad cumque, magnam deleniti adipisci fugiat facere. Veniam?",
-  },
-  {
-    title: "Modern tooling",
-    Icon: FiTool,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, saepe quo!",
-  },
+      "Ti consigliamo in base alle tue esigenze i migliori advisor della tua zona, che ti seguiranno passo dopo passo nel tuo percorso di investimenti",
+  }
 ];

@@ -86,7 +86,7 @@ const Cursor = ({ hovered, scope }) => {
 };
 
 const Logo = () => (
-  <span className="font-[Satoshi-Black] pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-crema mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]">
+  <span className=" pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-crema mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]">
     WiseFi
   </span>
 );
@@ -104,7 +104,7 @@ const GlassLink = ({ text }) => {
       href="#"
       className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95"
     >
-      <span className="font-[Satoshi-Regular] elative z-10 text-white/90 transition-colors group-hover:text-white">
+      <span className=" relative z-10 text-white/90 transition-colors group-hover:text-white">
         {text}
       </span>
       <span className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 to-white/5 opacity-0 transition-opacity group-hover:opacity-100" />
@@ -114,7 +114,7 @@ const GlassLink = ({ text }) => {
 
 const TextLink = ({ text }) => {
   return (
-    <a href="#" className="font-[Satoshi-Regular] text-bianco/90 transition-colors hover:text-bianco">
+    <a href="#" className="font-light text-bianco/90 transition-colors hover:text-bianco">
       {text}
     </a>
   );
@@ -126,7 +126,7 @@ const Buttons = ({ setMenuOpen }) => (
       <SignInButton />
     </div>
 
-    <button className="font-[Satoshi-Regular] relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-nero from-20% to-verdeScuro px-4 py-2 font-medium text-crema transition-transform hover:scale-105 active:scale-95">
+    <button className="font-black relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-nero from-20% to-verdeScuro px-4 py-2 text-crema transition-transform hover:scale-105 active:scale-95">
       Try for free
     </button>
 
@@ -142,7 +142,7 @@ const Buttons = ({ setMenuOpen }) => (
 const SignInButton = () => {
   return (
     <button className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
-      <span className="font-[Satoshi-Light] relative z-10 text-bianco/90 transition-colors group-hover:text-bianco">
+      <span className="font-light relative z-10 text-bianco/90 transition-colors group-hover:text-bianco">
         Sign in
       </span>
       <span className="absolute inset-0 z-0 bg-gradient-to-br from-bianco/20 to-bianco/5 opacity-0 transition-opacity group-hover:opacity-100" />

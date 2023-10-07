@@ -11,10 +11,10 @@ const ShuffleHero = () => {
          Personal Finance AI support
         </span>
         <h3 className="font-[Satoshi-Black] text-crema text-4xl md:text-6xl font-semibold">
-          Why go crazy? Ask AI Finance Bro
+          Why go crazy? Ask AI WiseFi
         </h3>
         <p className="font-[Satoshi-Regular] text-base md:text-lg text-bianco my-4 md:my-6">
-          Finance bro it's the only platform that gets everythong in your life togheter
+        WiseFi it's the only platform that gets everythong in your life togheter
         </p>
         <button className="hover:font-[Satoshi-Bold] font-[Satoshi-Regular] bg-verdeScuro text-bianco font-large py-2 px-8 rounded transition-all hover:bg-verdeChiaro hover:text-nero duration-100 active:scale-95">
           Try It Now!

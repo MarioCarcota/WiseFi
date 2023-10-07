@@ -87,7 +87,7 @@ const Cursor = ({ hovered, scope }) => {
 
 const Logo = () => (
   <span className="font-[Satoshi-Black] pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-crema mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]">
-    finance bro
+    WiseFi
   </span>
 );
 

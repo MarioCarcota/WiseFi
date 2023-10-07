@@ -3,7 +3,7 @@ import './globals.css'
 
 
 export const metadata = {
-  title: 'Finance Bro',
+  title: 'WiseFi',
   description: 'Your all-in app for personal finance',
 }
 

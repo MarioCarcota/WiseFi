@@ -28,7 +28,7 @@ const CollapseCardFeatures = () => {
   };
 
   return (
-    <section className="overflow-hidden  px-4 py-12">
+    <section className="w-full overflow-hidden  px-4 py-12">
       <div className="mx-auto max-w-6xl">
         <div className="mb-8 flex justify-between gap-4">
           <h2 className="text-4xl text-crema font-bold leading-[1.2] md:text-5xl">

@@ -43,7 +43,7 @@ const DragShuffleHero = () => {
   return (
     <section
       style={{ pointerEvents: dragging ? "none" : undefined }}
-      className=" px-8 py-24 text-slate-50"
+      className="w-full overflow-hidden px-8 py-24 text-slate-50"
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 md:grid-cols-2 md:gap-8">
         <div>
@@ -59,13 +59,8 @@ const DragShuffleHero = () => {
             onSubmit={(e) => e.preventDefault()}
             className="flex items-center gap-2"
           >
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full rounded border-transparent bg-bianco px-3 py-2 transition-colors focus:bg-crema focus:outline-none"
-            />
             <button className="whitespace-nowrap rounded bg-verdeScuro px-3 py-2 transition-transform hover:scale-[1.02] active:scale-[0.98]">
-              Join newsletter
+              Try now our AI!
             </button>
           </form>
         </div>
@@ -167,16 +162,16 @@ const Card = ({
       transition={{
         duration: 0.35,
       }}
-      className={`absolute left-0 top-0 grid h-[450px] w-[350px] select-none place-content-center space-y-6 rounded-2xl border-2 border-slate-700 bg-slate-800/20 p-6 shadow-xl backdrop-blur-md ${
+      className={`absolute left-0 top-0 grid h-[450px] w-[350px] select-none place-content-center space-y-6 rounded-2xl border-2 border-crema bg-verdeScuro/70 p-6 shadow-xl backdrop-blur-md ${
         draggable ? "cursor-grab active:cursor-grabbing" : ""
       }`}
     >
       <img
         src={imgUrl}
         alt={`Image of ${author}`}
-        className="pointer-events-none mx-auto h-32 w-32 rounded-full border-2 border-slate-700 bg-slate-200 object-cover"
+        className="pointer-events-none mx-auto h-32 w-32 rounded-full border-2 border-crema bg-verdeScuro object-cover"
       />
-      <span className="text-center text-lg italic text-slate-400">
+      <span className="text-center text-lg italic text-crema">
         "{testimonial}"
       </span>
       <span className="text-center text-sm font-medium text-verdeChiaro">

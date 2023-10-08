@@ -14,7 +14,7 @@ export const loginGoogle = () => {
             // The signed-in user info.
             const user = result.user;
            
-                router.push("/platform")
+            router.push("/platform")
             
         })
         .catch((error) => {

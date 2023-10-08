@@ -8,6 +8,7 @@ import LogsignOut from "@/firebase/logOut";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { loginGoogle } from "@/firebase/googleBtn";
 
 const Header = () => {
   return (
@@ -138,12 +139,12 @@ const Buttons = ({ setMenuOpen }) => {
       <SignInButton />
     </div>
 
-    {user === null ? <a href={"/register/"}>
-    <button className="font-black relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-nero from-20% to-verdeScuro px-4 py-2 text-crema transition-transform hover:scale-105 active:scale-95">
+    {user === null ? 
+    <button onClick={loginGoogle} className="font-black relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-nero from-20% to-verdeScuro px-4 py-2 text-crema transition-transform hover:scale-105 active:scale-95">
      Prova Gratis
     </button>
 
-    </a> :
+     :
 
 <a href={"/platform/"}>
 <button className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
@@ -173,14 +174,14 @@ const SignInButton = () => {
   return (
     <>
 
-    {user === null ? <a href={"/login/"}>
-    <button className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
+    {user === null ?
+    <button onClick={loginGoogle} className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
       <span className="font-light relative z-10 text-bianco/90 transition-colors group-hover:text-bianco">
         Accedi
       </span>
       <span className="absolute inset-0 z-0 bg-gradient-to-br from-bianco/20 to-bianco/5 opacity-0 transition-opacity group-hover:opacity-100" />
     </button>
-    </a> :
+     :
 
       <div onClick={LogsignOut}>
         <div className="flex items-center gap-4">

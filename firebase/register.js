@@ -1,6 +1,6 @@
 import { useRouter } from "next/navigation";
-import firebase_app from "./config";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import firebase_app from "./firebaseStart";
 
 const auth = getAuth(firebase_app);
 

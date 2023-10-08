@@ -1,8 +1,13 @@
 "use client"
 
-import { FiMenu, FiArrowUpRight } from "react-icons/fi";
+import { FiMenu, FiArrowUpRight, FiLogOut } from "react-icons/fi";
 import { useEffect, useRef, useState } from "react";
 import { useAnimate, motion } from "framer-motion";
+import { useAuthContext } from "@/firebase/authContext";
+import LogsignOut from "@/firebase/logOut";
+import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   return (
@@ -85,15 +90,17 @@ const Cursor = ({ hovered, scope }) => {
   );
 };
 
-const Logo = () => (
-  <span className=" pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-crema mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]">
-    WiseFi
-  </span>
-);
+const Logo = () => {
+  const router = useRouter()
+  const { user } = useAuthContext()
+  return (
+  <Image src="/Logo_WiseFi.png" onClick={() => { if(user === null){
+    router.push('/');} else {router.push('/platform')}}} height={200} width={200} className="cursor-pointer pr-14"/>
+)};
 
 const Links = () => (
   <div className="hidden items-center gap-2 md:flex">
-    <GlassLink text="Cos'è WiseFit" />
+    <GlassLink text="Cos'è WiseFi" />
     <GlassLink text="Il Nostro Team" />
   </div>
 );
@@ -120,16 +127,36 @@ const TextLink = ({ text }) => {
   );
 };
 
-const Buttons = ({ setMenuOpen }) => (
+const Buttons = ({ setMenuOpen }) => {
+  
+
+  const { user } = useAuthContext()
+
+  return (
   <div className="flex items-center gap-4">
     <div className="hidden md:block">
       <SignInButton />
     </div>
 
+    {user === null ? <a href={"/register/"}>
     <button className="font-black relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-nero from-20% to-verdeScuro px-4 py-2 text-crema transition-transform hover:scale-105 active:scale-95">
      Prova Gratis
     </button>
 
+    </a> :
+
+<a href={"/platform/"}>
+<button className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
+  <span className="font-light relative z-10 text-bianco/90 transition-colors group-hover:text-bianco">
+    Vai alla piattaforma
+  </span>
+  <span className="absolute inset-0 z-0 bg-gradient-to-br from-bianco/20 to-bianco/5 opacity-0 transition-opacity group-hover:opacity-100" />
+</button>
+</a> 
+
+    }
+
+  
     <button
       onClick={() => setMenuOpen((pv) => !pv)}
       className="ml-2 block scale-100 text-3xl text-white/90 transition-all hover:scale-105 hover:text-white active:scale-95 md:hidden"
@@ -137,16 +164,42 @@ const Buttons = ({ setMenuOpen }) => (
       <FiMenu />
     </button>
   </div>
-);
+)};
 
 const SignInButton = () => {
+
+  const { user } = useAuthContext()
+
   return (
+    <>
+
+    {user === null ? <a href={"/login/"}>
     <button className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
       <span className="font-light relative z-10 text-bianco/90 transition-colors group-hover:text-bianco">
         Accedi
       </span>
       <span className="absolute inset-0 z-0 bg-gradient-to-br from-bianco/20 to-bianco/5 opacity-0 transition-opacity group-hover:opacity-100" />
     </button>
+    </a> :
+
+      <div onClick={LogsignOut}>
+        <div className="flex items-center gap-4">
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex flex-row justify-center gap-2 items-center px-4 py-2 bg-gradient-to-r from-nero to-verdeScuro text-white font-medium rounded-md whitespace-nowrap"
+          >
+            Log Out <FiLogOut />
+          </motion.button>
+        </div>
+      </div>
+
+    }
+
+
+  </>
+   
   );
 };
 

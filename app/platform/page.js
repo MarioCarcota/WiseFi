@@ -1,9 +1,8 @@
 "use client"
-import ShimmerBorderCard from '@/components/cardShimmer'
 import React from 'react'
-import Memori from '@memori.ai/memori-react';
 import '@memori.ai/memori-react/dist/styles.css';
 import News from '@/components/news';
+import Image from 'next/image';
 
 function Platform() {
 
@@ -19,6 +18,29 @@ function Platform() {
     
   return (
     <section className='mt-48 px-24'>
+        <div className='h-auto w-full mb-24'>
+        <h2 className='text-xl text-crema'>I consulenti perfetti per le tue esigenze!</h2>
+        <div className='flex gap-10'>
+        {jsonExperienced.map((article, index) => (
+        <div key={index} className="w-[20vw] h-fit mt-12 bg-verdeScuro border border-verdeChiaro rounded-lg shadow">
+           
+         
+          <div className="p-5">
+          
+              <h2 className=" text-2xl font-bold tracking-tight text-bianco">{article.name}</h2>
+              <h5 className="mb-5 text-l font-regular tracking-tight text-crema">{article.specializzazione}</h5>
+            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{article.description}</p>
+            <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-black text-center text-nero bg-verdeChiaro rounded-lg focus:ring-4 focus:outline-none ">
+              Contatta subito
+              <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+        </div>
+        </div>
         <div className='h-auto w-full mb-24'>
         <h2 className='text-xl text-crema'>Le ultime notizie nel campo finanziario</h2>
         <div className='flex'>

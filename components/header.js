@@ -101,15 +101,14 @@ const Logo = () => {
 
 const Links = () => (
   <div className="hidden items-center gap-2 md:flex">
-    <GlassLink text="Cos'è WiseFi" />
-    <GlassLink text="Il Nostro Team" />
+    <GlassLink text="Scopri la nostra nuova AI" />
   </div>
 );
 
 const GlassLink = ({ text }) => {
   return (
     <a
-      href="#"
+      href="/platform/aichatbot"
       className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95"
     >
       <span className=" relative z-10 text-white/90 transition-colors group-hover:text-white">
@@ -122,7 +121,7 @@ const GlassLink = ({ text }) => {
 
 const TextLink = ({ text }) => {
   return (
-    <a href="#" className="font-light text-bianco/90 transition-colors hover:text-bianco">
+    <a href="/platform/aichatbot" className="font-light text-bianco/90 transition-colors hover:text-bianco">
       {text}
     </a>
   );
@@ -215,8 +214,7 @@ const MobileMenu = ({ menuOpen }) => {
     >
       <div className="flex items-center justify-between px-4 pb-4">
         <div className="flex items-center gap-4">
-          <TextLink text="Cos'è WiseFit" />
-          <TextLink text="Il Nostro Team" />
+          <TextLink text="Scopri la nostra nuova AI!" />
         </div>
         <SignInButton />
       </div>

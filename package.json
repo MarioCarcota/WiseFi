@@ -23,6 +23,7 @@
     "react-icons": "^4.11.0",
     "supports-color": "^9.4.0",
     "utf-8-validate": "^5.0.10",
+    "vercel": "^32.4.1",
     "vertx": "^0.0.1-security"
   },
   "devDependencies": {

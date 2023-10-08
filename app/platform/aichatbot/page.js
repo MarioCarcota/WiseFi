@@ -1,5 +1,3 @@
-"use client"
-
 import React from 'react'
 import Memori from '@memori.ai/memori-react';
 import '@memori.ai/memori-react/dist/styles.css';

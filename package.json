@@ -13,6 +13,7 @@
     "@memori.ai/memori-react": "^2.18.8",
     "@next/font": "^13.5.4",
     "axios": "^1.5.1",
+    "bufferutil": "^4.0.7",
     "encoding": "^0.1.13",
     "firebase": "^10.4.0",
     "framer-motion": "^10.16.4",
@@ -21,6 +22,7 @@
     "react-dom": "^18",
     "react-icons": "^4.11.0",
     "supports-color": "^9.4.0",
+    "utf-8-validate": "^5.0.10",
     "vertx": "^0.0.1-security"
   },
   "devDependencies": {

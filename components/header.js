@@ -1,21 +1,14 @@
-"use client"
+"use client";
 
 import { FiMenu, FiArrowUpRight, FiLogOut } from "react-icons/fi";
 import { useEffect, useRef, useState } from "react";
 import { useAnimate, motion } from "framer-motion";
-import { useAuthContext } from "@/firebase/authContext";
-import LogsignOut from "@/firebase/logOut";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { loginGoogle } from "@/firebase/googleBtn";
 
 const Header = () => {
-  return (
-  
-      <GlassNavigation />
-
-  );
+  return <GlassNavigation />;
 };
 
 const GlassNavigation = () => {
@@ -92,12 +85,19 @@ const Cursor = ({ hovered, scope }) => {
 };
 
 const Logo = () => {
-  const router = useRouter()
-  const { user } = useAuthContext()
+  const router = useRouter();
   return (
-  <Image src="/Logo_WiseFi.png" onClick={() => { if(user === null){
-    router.push('/');} else {router.push('/platform')}}} height={200} width={200} className="cursor-pointer pr-14"/>
-)};
+    <Image
+      src="/Logo_WiseFi.png"
+      onClick={() => {
+        router.push("/");
+      }}
+      height={200}
+      width={200}
+      className="cursor-pointer pr-14"
+    />
+  );
+};
 
 const Links = () => (
   <div className="hidden items-center gap-2 md:flex">
@@ -108,7 +108,7 @@ const Links = () => (
 const GlassLink = ({ text }) => {
   return (
     <a
-      href="/platform/aichatbot"
+      href="/platform/"
       className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95"
     >
       <span className=" relative z-10 text-white/90 transition-colors group-hover:text-white">
@@ -121,85 +121,34 @@ const GlassLink = ({ text }) => {
 
 const TextLink = ({ text }) => {
   return (
-    <a href="/platform/aichatbot" className="font-light text-bianco/90 transition-colors hover:text-bianco">
+    <a
+      href="/platform/"
+      className="font-light text-bianco/90 transition-colors hover:text-bianco"
+    >
       {text}
     </a>
   );
 };
 
 const Buttons = ({ setMenuOpen }) => {
-  
-
-  const { user } = useAuthContext()
-
   return (
-  <div className="flex items-center gap-4">
-    <div className="hidden md:block">
-      <SignInButton />
+    <div className="flex items-center gap-4">
+      <a href={"/platform/"}>
+        <button className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
+          <span className="font-light relative z-10 text-bianco/90 transition-colors group-hover:text-bianco">
+            Vai alla piattaforma
+          </span>
+          <span className="absolute inset-0 z-0 bg-gradient-to-br from-bianco/20 to-bianco/5 opacity-0 transition-opacity group-hover:opacity-100" />
+        </button>
+      </a>
+
+      <button
+        onClick={() => setMenuOpen((pv) => !pv)}
+        className="ml-2 block scale-100 text-3xl text-white/90 transition-all hover:scale-105 hover:text-white active:scale-95 md:hidden"
+      >
+        <FiMenu />
+      </button>
     </div>
-
-    {user === null ? 
-    <button onClick={loginGoogle} className="font-black relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-nero from-20% to-verdeScuro px-4 py-2 text-crema transition-transform hover:scale-105 active:scale-95">
-     Prova Gratis
-    </button>
-
-     :
-
-<a href={"/platform/"}>
-<button className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
-  <span className="font-light relative z-10 text-bianco/90 transition-colors group-hover:text-bianco">
-    Vai alla piattaforma
-  </span>
-  <span className="absolute inset-0 z-0 bg-gradient-to-br from-bianco/20 to-bianco/5 opacity-0 transition-opacity group-hover:opacity-100" />
-</button>
-</a> 
-
-    }
-
-  
-    <button
-      onClick={() => setMenuOpen((pv) => !pv)}
-      className="ml-2 block scale-100 text-3xl text-white/90 transition-all hover:scale-105 hover:text-white active:scale-95 md:hidden"
-    >
-      <FiMenu />
-    </button>
-  </div>
-)};
-
-const SignInButton = () => {
-
-  const { user } = useAuthContext()
-
-  return (
-    <>
-
-    {user === null ?
-    <button onClick={loginGoogle} className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
-      <span className="font-light relative z-10 text-bianco/90 transition-colors group-hover:text-bianco">
-        Accedi
-      </span>
-      <span className="absolute inset-0 z-0 bg-gradient-to-br from-bianco/20 to-bianco/5 opacity-0 transition-opacity group-hover:opacity-100" />
-    </button>
-     :
-
-      <div onClick={LogsignOut}>
-        <div className="flex items-center gap-4">
-
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex flex-row justify-center gap-2 items-center px-4 py-2 bg-gradient-to-r from-nero to-verdeScuro text-white font-medium rounded-md whitespace-nowrap"
-          >
-            Log Out <FiLogOut />
-          </motion.button>
-        </div>
-      </div>
-
-    }
-
-
-  </>
-   
   );
 };
 
@@ -216,7 +165,6 @@ const MobileMenu = ({ menuOpen }) => {
         <div className="flex items-center gap-4">
           <TextLink text="Scopri la nostra nuova AI!" />
         </div>
-        <SignInButton />
       </div>
     </motion.div>
   );
